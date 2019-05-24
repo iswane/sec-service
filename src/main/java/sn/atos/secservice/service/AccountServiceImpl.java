@@ -1,11 +1,17 @@
 package sn.atos.secservice.service;
 
+
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
 import sn.atos.secservice.dao.AppRoleRepository;
 import sn.atos.secservice.dao.AppUserRepository;
 import sn.atos.secservice.domaine.AppRole;
 import sn.atos.secservice.domaine.AppUser;
 
+import javax.transaction.Transactional;
+
+@Service
+@Transactional
 public class AccountServiceImpl implements AccountService {
 
     private AppRoleRepository appRoleRepository;
